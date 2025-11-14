@@ -40,34 +40,36 @@ export default function Experience() {
   ];
 
   return (
-    <section id="experience" className="py-20 bg-gradient-to-b from-gray-50 to-white">
+    <section id="experience" className="py-20 bg-muted/30">
       <div className="max-w-6xl mx-auto px-6">
         <div className="text-center mb-16 space-y-4">
           <Badge variant="secondary" className="mb-4">
             <Briefcase className="w-4 h-4 mr-2" />
             Mon Parcours
           </Badge>
-          <h2 className="text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600">Expérience & Formation</h2>
+          <h2 className="text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400">
+            Expérience & Formation
+          </h2>
         </div>
 
         <div className="grid md:grid-cols-2 gap-8">
           {/* Expérience professionnelle */}
           <div className="space-y-6">
             <h3 className="text-2xl font-bold flex items-center gap-2">
-              <Briefcase className="w-6 h-6 text-blue-600" />
+              <Briefcase className="w-6 h-6 text-blue-600 dark:text-blue-400" />
               Expérience professionnelle
             </h3>
             {experiences.map((exp, i) => (
-              <Card key={i} className="border-2 hover:border-blue-200 transition-colors">
+              <Card key={i} className="border-2 hover:border-primary/50 transition-colors">
                 <CardHeader>
                   <CardTitle className="text-xl">{exp.title}</CardTitle>
-                  <div className="flex justify-between items-center text-sm text-gray-600">
+                  <div className="flex justify-between items-center text-sm text-muted-foreground">
                     <span className="font-medium">{exp.company}</span>
                     <span>{exp.period}</span>
                   </div>
                 </CardHeader>
                 <CardContent className="space-y-4">
-                  <p className="text-gray-600">{exp.description}</p>
+                  <p className="text-muted-foreground">{exp.description}</p>
                   <div className="flex flex-wrap gap-2">
                     {exp.tags.map((tag) => (
                       <Badge key={tag} variant="secondary">
@@ -83,20 +85,20 @@ export default function Experience() {
           {/* Formation */}
           <div className="space-y-6">
             <h3 className="text-2xl font-bold flex items-center gap-2">
-              <GraduationCap className="w-6 h-6 text-purple-600" />
+              <GraduationCap className="w-6 h-6 text-purple-600 dark:text-purple-400" />
               Formation
             </h3>
             {education.map((edu, i) => (
-              <Card key={i} className="border-2 hover:border-purple-200 transition-colors">
+              <Card key={i} className="border-2 hover:border-primary/50 transition-colors">
                 <CardHeader>
                   <CardTitle className="text-xl">{edu.title}</CardTitle>
-                  <div className="flex justify-between items-center text-sm text-gray-600">
+                  <div className="flex justify-between items-center text-sm text-muted-foreground">
                     <span className="font-medium">{edu.school}</span>
                     <span>{edu.period}</span>
                   </div>
                 </CardHeader>
                 <CardContent>
-                  <p className="text-gray-600">{edu.description}</p>
+                  <p className="text-muted-foreground">{edu.description}</p>
                 </CardContent>
               </Card>
             ))}

@@ -27,7 +27,7 @@ export default function About() {
   ];
 
   return (
-    <section id="about" className="py-20 bg-white">
+    <section id="about" className="py-20 bg-background">
       <div className="max-w-6xl mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Partie gauche - Texte */}
@@ -35,13 +35,15 @@ export default function About() {
             <Badge variant="secondary">👋 À propos</Badge>
             <h2 className="text-4xl font-bold">
               Développeur passionné par les{" "}
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600">technologies modernes</span>
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400">
+                technologies modernes
+              </span>
             </h2>
-            <p className="text-lg text-gray-600 leading-relaxed">
+            <p className="text-lg text-muted-foreground leading-relaxed">
               Fort de 3 années d'expérience en développement web, je maîtrise l'écosystème JavaScript moderne (React, Node.js, TypeScript) et les
               bonnes pratiques de développement.
             </p>
-            <p className="text-lg text-gray-600 leading-relaxed">
+            <p className="text-lg text-muted-foreground leading-relaxed">
               Je recherche une entreprise innovante où je pourrai contribuer à des projets ambitieux tout en continuant à apprendre et évoluer
               techniquement.
             </p>
@@ -57,13 +59,13 @@ export default function About() {
           {/* Partie droite - Highlights */}
           <div className="grid grid-cols-2 gap-4">
             {highlights.map((item) => (
-              <Card key={item.title} className="border-2 hover:border-blue-200 hover:shadow-lg transition-all">
+              <Card key={item.title} className="border-2 hover:border-primary/50 hover:shadow-lg transition-all">
                 <CardContent className="p-6 space-y-3">
-                  <div className="bg-blue-100 w-12 h-12 rounded-lg flex items-center justify-center">
-                    <item.icon className="w-6 h-6 text-blue-600" />
+                  <div className="bg-primary/10 w-12 h-12 rounded-lg flex items-center justify-center">
+                    <item.icon className="w-6 h-6 text-primary" />
                   </div>
                   <h3 className="font-bold text-lg">{item.title}</h3>
-                  <p className="text-sm text-gray-600">{item.description}</p>
+                  <p className="text-sm text-muted-foreground">{item.description}</p>
                 </CardContent>
               </Card>
             ))}

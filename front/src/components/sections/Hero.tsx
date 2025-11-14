@@ -6,10 +6,10 @@ export default function Hero() {
   const skills = ["React", "TypeScript", "Node.js", "PostgreSQL", "Docker"];
 
   return (
-    <section id="hero" className="min-h-screen flex flex-col justify-center items-center text-center relative overflow-hidden">
+    <section id="hero" className="min-h-screen flex flex-col justify-center items-center text-center relative overflow-hidden bg-background">
       {/* Gradient animé en arrière-plan */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 -z-10" />
-      <div className="absolute inset-0 bg-grid-slate-100 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))] -z-10" />
+      <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 dark:from-gray-950 dark:via-blue-950/20 dark:to-purple-950/20 -z-10" />
+      <div className="absolute inset-0 bg-grid-slate-100 dark:bg-grid-slate-800 [mask-image:linear-gradient(0deg,white,rgba(255,255,255,0.6))] dark:[mask-image:linear-gradient(0deg,black,rgba(0,0,0,0.6))] -z-10" />
 
       <div className="max-w-4xl mx-auto px-6 space-y-8">
         {/* Badge statut */}
@@ -18,19 +18,19 @@ export default function Hero() {
         </Badge>
 
         {/* Titre principal */}
-        <h1 className="text-6xl md:text-7xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600 animate-fade-in">
+        <h1 className="text-6xl md:text-7xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400 animate-fade-in">
           Développeur Full Stack
         </h1>
 
-        <p className="text-xl md:text-2xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
+        <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
           Passionné par le développement web moderne, je recherche un poste de{" "}
-          <span className="font-semibold text-blue-600">développeur full stack</span> pour contribuer à des projets innovants
+          <span className="font-semibold text-blue-600 dark:text-blue-400">développeur full stack</span> pour contribuer à des projets innovants
         </p>
 
         {/* Stack technique */}
         <div className="flex flex-wrap justify-center gap-2 pt-4">
           {skills.map((skill) => (
-            <Badge key={skill} variant="outline" className="px-4 py-2 text-sm hover:bg-blue-50 transition-colors">
+            <Badge key={skill} variant="outline" className="px-4 py-2 text-sm hover:bg-accent transition-colors">
               {skill}
             </Badge>
           ))}
@@ -54,17 +54,17 @@ export default function Hero() {
 
         {/* Social Links */}
         <div className="flex justify-center gap-4 pt-8">
-          <Button variant="ghost" size="icon" className="hover:bg-blue-50" asChild>
+          <Button variant="ghost" size="icon" className="hover:bg-accent" asChild>
             <a href="https://github.com/votre-profil" target="_blank" rel="noopener">
               <Github className="w-5 h-5" />
             </a>
           </Button>
-          <Button variant="ghost" size="icon" className="hover:bg-blue-50" asChild>
+          <Button variant="ghost" size="icon" className="hover:bg-accent" asChild>
             <a href="https://linkedin.com/in/votre-profil" target="_blank" rel="noopener">
               <Linkedin className="w-5 h-5" />
             </a>
           </Button>
-          <Button variant="ghost" size="icon" className="hover:bg-blue-50" asChild>
+          <Button variant="ghost" size="icon" className="hover:bg-accent" asChild>
             <a href="mailto:votre.email@exemple.com">
               <Mail className="w-5 h-5" />
             </a>
