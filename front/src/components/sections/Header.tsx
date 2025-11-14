@@ -14,7 +14,7 @@ export default function Header() {
   return (
     <header className="sticky top-0 bg-background/80 backdrop-blur-md shadow-sm z-50 border-b">
       <div className="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
-        <h1 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600">Votre Nom</h1>
+        <h1 className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-purple-600">Camil Saunier</h1>
 
         <nav className="hidden md:flex gap-8">
           {navItems.map((item) => (
